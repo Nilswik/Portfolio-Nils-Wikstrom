@@ -17,5 +17,5 @@ The sun us dynamic, using the Navigation API making it so it will show right ico
 
 
 FURTHER IMPLEMENTATION 
-  more weather icons, are currently 5 and one default 
-  add so users can see more cities or countries by searching
+  * more weather icons, are currently 5 and one default 
+  * add so users can see more cities or countries by searching
