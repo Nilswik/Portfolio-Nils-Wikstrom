@@ -1,6 +1,6 @@
 let usercity = ""; // Declare a global variable to hold the city name
-require("dotenv").config();
-const apikey = function getUserLocation() {
+
+function getUserLocation() {
   if ("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition(
       (position) => {
@@ -19,7 +19,7 @@ const apikey = function getUserLocation() {
   } else {
     console.log("Geolocation is not supported by this browser");
   }
-};
+}
 
 function reversegeocode(lat, lng) {
   const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}`;
@@ -43,14 +43,13 @@ function reversegeocode(lat, lng) {
 }
 
 function checkWeather() {
-  const apikey = process.env.API_KEY;
+  const apikey = "16bbe4b7b90bea72c140690f166772ea"; // not putting my key here :)
   const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${usercity}&appid=${apikey}`;
 
   if (!usercity) {
     console.log("User city is not defined yet.");
     return; // Exit if usercity is not set
   }
-
   fetch(apiURL)
     .then((response) => response.json())
     .then((data) => {
@@ -82,27 +81,27 @@ function updateWeatherImage(description) {
   }
   switch (description) {
     case "broken clouds" || "overcast cloud":
-      weatherimg.src = "./images/Broken_cloud.png";
+      weatherimg.src = "./../images/Broken_cloud.png";
       console.log("Broken clouds");
       break;
     case "overcast clouds":
-      weatherimg.src = "./images/Broken_cloud.png";
+      weatherimg.src = "./../images/Broken_cloud.png";
       console.log("Broken clouds");
       break;
     case "clear sky":
-      weatherimg.src = "./images/sunny.png";
+      weatherimg.src = "./../images/sunny.png";
       console.log("Clear sky");
       break;
     case "cloudy":
-      weatherimg.src = "./images/Cloudy.png";
+      weatherimg.src = "./../images/Cloudy.png";
       console.log("Cloudy");
       break;
     case "rain":
-      weatherimg.src = "./images/rain.png";
+      weatherimg.src = "./../images/rain.png";
       console.log("Rain");
       break;
     default:
-      weatherimg.src = "./images/default.png"; // Corrected variable name
+      weatherimg.src = "./weatherapp/images/default.png"; // Corrected variable name
       console.log("No image available");
       break;
   }
