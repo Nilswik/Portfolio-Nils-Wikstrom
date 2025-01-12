@@ -1,0 +1,56 @@
+img{
+    height: 200px;
+    width: 200px;
+}
+.Temprature{
+    font-size: 5vh;
+}
+.Temprature p {
+    margin: -10px;
+    font-size: 20px;
+}
+.UserCity{
+    
+    font-size: 5vh;
+}
+
+.main_container {
+    height: 60vh;
+    margin: auto auto;
+    width: 60vh;
+    border-radius: 25px;
+    text-align: center;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.information_panel{
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+    margin: auto auto;
+    margin-top: 10px;
+    border-radius: 25px;
+    height: 20vh;
+    width: 70vh;
+    text-align: center;
+
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;   
+}
+.infoitem{
+    margin: 0 10px;
+    font-size: 20px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+
+.infoitem:hover {
+    transform: scale(1.2);
+    border-radius: 0px;
+    
+}
+
+
