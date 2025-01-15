@@ -43,7 +43,7 @@ function reversegeocode(lat, lng) {
 }
 
 function checkWeather() {
-  const apikey = ""; // not putting my key here :)
+  const apikey = "16bbe4b7b90bea72c140690f166772ea"; // not putting my key here :)
   const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${usercity}&appid=${apikey}`;
 
   if (!usercity) {
