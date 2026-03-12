@@ -2,7 +2,7 @@
 
 function fetchWeatherData(setWeatherData, setUserCity){
     const usercity = "stockholm";
-    const apiKEY = "16bbe4b7b90bea72c140690f166772ea";
+    const apiKEY = "";
     const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${usercity}&appid=${apiKEY}`;
     if(!usercity){
         console.log("User city not defined yet ");
